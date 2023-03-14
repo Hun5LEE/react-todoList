@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+input {
+  border-radius: 5px;
+  width: 150px;
+  height: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input:focus {
+  outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
+  padding-left: 16px;
+  height: 370px;
+  overflow-y: scroll;
+}
+
+li {
+  display: flex;
+
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+}
+
+.btn {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(
+    to bottom,
+    rgb(156, 113, 201),
+    rgb(251, 190, 194)
+  );
+}
+
+/* greet */
+
+.greet-page {
+  font-family: "Noto Sans KR", sans-serif;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    rgb(251, 190, 194),
+    rgb(156, 113, 201)
+  );
+  width: 100vw;
+  height: 1000px;
+  transform: rotate(0.04deg);
+  opacity: 0;
+  transition: all 1.5s;
+}
+
+.greet-wraper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 30vh;
+  font-size: 2.5rem;
+}
+
+.name {
+  opacity: 0;
+  transition: all 2s;
+  margin-bottom: 32px;
+}
+
+.show {
+  opacity: 1;
+}
+
+.showed {
+  opacity: 1;
+}
+
+/* 여기까지 */
+
+/* TodoTemplate */
+.todoTemplate {
+  visibility: hidden;
+  position: fixed;
+  top: -100px;
+  border: 3px solid black;
+  border-radius: 1rem;
+  width: 120px;
+  height: 96px;
+  text-align: center;
+  transition: all 1s;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.visible {
+  visibility: visible;
+  top: -50px;
+}
+
+.fa-arrow-down {
+  font-size: 2.5rem;
+  margin-top: 50px;
+}
+
+/* .template-background {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+} */
+
+.template-wrapper {
+  position: absolute;
+  visibility: hidden;
+  background-color: white;
+  top: -900px;
+  border-radius: 3%;
+  width: 45%;
+  min-width: 360px;
+  max-width: 450px;
+  height: 70%;
+  min-height: 600px;
+  max-height: 900px;
+  z-index: 4;
+  opacity: 0;
+  transition: all 1.5s;
+}
+
+.showTmp {
+  visibility: visible;
+  opacity: 1;
+  top: 100px;
+}
+
+.template-close-btn {
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+}
+/* Todolist */
+
+.list-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-input {
+  flex: 2;
+  text-align: center;
+  width: 300px;
+  margin: 16px;
+}
+
+.fa-plus {
+  flex: 1;
+  font-size: 2.5rem;
+  background-color: #58e2b6;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  padding: 5px 3px 3px 9px;
   color: white;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-top: 32px;
+  transition: all 1s;
 }
 
-.App-link {
-  color: #61dafb;
+.list-btn {
+  background-color: white;
+  border: 1px solid #e5e8eb;
+  border-radius: 50px;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 16px;
+  vertical-align: middle;
+  padding-left: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fa-check {
+  color: #e5e8eb;
+  transition: all 0.5s;
 }
+
+.check {
+  color: #58e2b6;
+  border-color: #58e2b6;
+}
+
+.delete-btn {
+  background-color: white;
+  margin-left: 16px;
+}
+
+.close-btn {
+  background-color: #fe868c;
+  transform: rotate(45deg);
+  transition: all 1s;
+}
+/* 여기까지  */
